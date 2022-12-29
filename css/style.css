@@ -7,7 +7,6 @@
 html{
     scroll-behavior: smooth;
 }
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&family=Exo:wght@200;300;500;600&family=Lemonada:wght@700&family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Rubik+Glitch&family=Ruthie&family=Work+Sans&display=swap');
 body{
     background-color: #030503;
     width: 100%;
@@ -75,7 +74,8 @@ body{
     color: #fff;
     height: 50px;
     font-size: 16px;
-    font-family: 'Lemonada', cursive;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 .menu ul li a i{
     margin: 5px;
@@ -123,6 +123,22 @@ body{
         transform: translateY(0) rotate(0deg) scale(1);
     }
 }
+.book-tour{
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #00d26a;
+    color: #fff;
+    border-radius: 30px;
+    margin-left: 20px;
+}
+.book-tour-ref{
+    display: none;
+}
 .home .content{
     width: 100%;
     height: 100%;
@@ -140,6 +156,15 @@ body{
 }
 .home .content .text h1{
     margin: 30px 0;
+    animation: ct 1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-100px);
+}
+@keyframes ct {
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 .home .content .text h1 span,
 .home .content .text i{
@@ -148,6 +173,9 @@ body{
 .home .content .text p{
     font-size: 18px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: ct 1s 0.1s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-130px);
 }
 .home .content .image-content{
     height: 100%;
@@ -174,6 +202,9 @@ body{
     transition: all .1s linear;
     border: 1px solid #00d26a;
     overflow: hidden;
+    animation: ct 1s 0.2s ease-out forwards;
+    opacity: 0;
+    transform: translateX(-150px);
 }
 .home .content .text a:active{
     color: #00d26a;
@@ -228,7 +259,7 @@ body{
     position: relative;
     font-weight: bold;
     font-size: 0.9rem;
-    font-family: 'Lemonada', cursive;
+    font-family: Arial, Helvetica, sans-serif;
     border: 3px solid #102770;
     border-radius: 4px;
     height: 30px;
@@ -461,7 +492,7 @@ body{
     transform: translate3d(0, 0, 40px) perspective(100px);
     opacity: 1;
     pointer-events: auto;
-    transition: transform 400ms 1200ms ease, opacity 400ms 1200ms ease;
+    transition: transform 400ms 900ms ease, opacity 400ms 900ms ease;
   }
   .pricing:not(:checked) ~ .card-3d-wrap .card-3d-wrapper .img-1 {
     opacity: 0;
@@ -491,7 +522,7 @@ body{
     transform: translate3d(0, 0, 55px) perspective(100px) scale(1);
     opacity: 1;
     pointer-events: auto;
-    transition: transform 300ms 1300ms ease, opacity 200ms 1300ms ease;
+    transition: transform 300ms 1000ms ease, opacity 200ms 1000ms ease;
   }
   .pricing:not(:checked) ~ .card-3d-wrap .card-3d-wrapper .img-3 {
     opacity: 0;
@@ -509,7 +540,7 @@ body{
     transform: translate3d(0, 0, 25px) perspective(100px) scale(1) rotateZ(45deg);
     opacity: 1;
     pointer-events: auto;
-    transition: transform 300ms 1300ms ease, opacity 200ms 1300ms ease;
+    transition: transform 300ms 1000ms ease, opacity 200ms 1000ms ease;
   }
   .pricing:not(:checked) ~ .card-3d-wrap .card-3d-wrapper .img-6 {
     opacity: 0;
@@ -534,7 +565,7 @@ body{
     opacity: 1;
     pointer-events: auto;
     transform: translate3d(0, 0, 45px) perspective(100px) scale(1);
-    transition: transform 400ms 1200ms ease, opacity 300ms 1200ms ease;
+    transition: transform 400ms 900ms ease, opacity 300ms 900ms ease;
   }
   .img-5{
     position: absolute;
@@ -552,7 +583,7 @@ body{
     opacity: 1;
     pointer-events: auto;
     transform: translate3d(0, 0, 35px) perspective(100px) scale(1) rotate(0deg);
-    transition: transform 400ms 1300ms ease, opacity 300ms 1300ms ease;
+    transition: transform 400ms 1000ms ease, opacity 300ms 1000ms ease;
   }
   .img-7{
     position: absolute;
@@ -570,7 +601,7 @@ body{
     opacity: 1;
     pointer-events: auto;
     transform: translate3d(0, 0, 35px) perspective(100px) scale(1.5) rotateZ(30deg);
-    transition: transform 400ms 1300ms ease, opacity 300ms 1300ms ease;
+    transition: transform 400ms 1100ms ease, opacity 300ms 1000ms ease;
   }
 /* SECTION CONTENT */
 .section .content{
@@ -621,9 +652,13 @@ body{
         padding-left: 20px;
         box-sizing: border-box;
     }
+    .book-tour{
+        padding: 0 20px;
+        position: absolute;
+        right: 20px;
+    }
     .home .content .image-content{
-        transform: translateX(50%);
-        right: 50%;
+        width: 100%;
     }
     .home .content .text h1{
         font-size: 25px;
@@ -645,5 +680,26 @@ body{
         width: 100%;
         height: 100vh;
         position: relative;
+    }
+}
+@media  screen and (max-width: 350px) {
+    .book-tour{
+        display: none;
+    }
+    .book-tour-ref{
+        display: flex;
+        color: #fff;
+        height: 40px;
+        width: 70%;
+        border-radius: 0 20px 20px 0;
+        background-color: #00d26a;
+        align-items: center;
+        padding-left: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .book-tour-ref i{
+        margin-right: 20px;
     }
 }

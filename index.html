@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOREST🍃</title>
     <link rel="stylesheet" href="css/all.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,18 +21,19 @@
                             <i class="fa-solid fa-angles-left"></i>
                         </div>
                     </div>
-                    <ul>
+                    <ul id="linkMenu">
                         <li><a href="#"><i class="fa-solid fa-location-dot"></i> LOCATION</a></li>
                         <li><a href="#">ABOUT US</a></li>
                         <li><a href="#">NEWS</a></li>
                         <li><a href="#">CONTACT</a></li>
                     </ul>
+                    <a href="#card" class="book-tour-ref"><i class="fa-solid fa-book"></i> Book a tour</a>
                 </nav>
                 <div class="exit-home-menu-2" id="nav-toggle"></div>
-                <a href="#section" class="book-">Book a tour</a>
+                <a href="#card" class="book-tour">Book a tour</a>
             </div>
             <div class="content">
-                <div class="text">
+                <div class="text" id="text">
                     <h1><span>FOREST</span> ECO <br>ENVIRONMENT <i class="fa-solid fa-leaf"></i></h1>
                     <p>A forest is an area of land dominated by trees. 
                         Hundreds of definitions of forest are used throughout the world,
@@ -41,14 +43,14 @@
                         <span>Learn more</span>
                     </a>
                 </div>
-                <div class="image-content"></div>
+                <div class="image-content" id="image-content"></div>
             </div>
         </div>
         <div class="section" id="section">
             <div class="content">
 
             </div>
-            <div class="card">
+            <div class="card" id="card" data-aos="fade-right" data-aos-duration="1200">
                 <input class="pricing" type="checkbox" id="pricing" name="pricing"/>
 			    <label for="pricing">
                     <span class="camping">CAMPING</span>
@@ -60,7 +62,7 @@
                             <div class="pricing-wrap">
                                 <h4>CAMPING</h4>
                                 <h2 class=""><sup>$</sup>29 / 8<sup>hrs</sup></h2>
-                                <p class="">per person</p>
+                                <p class="">per person <i class="fa-solid fa-person-hiking"></i></p>
                                 <p class="map"><i class="fa-solid fa-map-location-dot"></i></p>
                                 <p class="">Tara, Serbia</p>
                                 <a href="#0" class="link">Choose Date</a>
@@ -81,8 +83,8 @@
                         <div class="card-back">
                             <div class="pricing-wrap">
                                 <h4>KAYAKING</h4>
-                                <h2 class=""><sup>$</sup>29 / 8<sup>hrs</sup></h2>
-                                <p class="">per person</p>
+                                <h2 class=""><sup>$</sup>24 / 4<sup>hrs</sup></h2>
+                                <p class="">per person <i class="fa-solid fa-person-swimming"></i></p>
                                 <p class="map"><i class="fa-solid fa-map-location-dot"></i></p>
                                 <p class="">Tara, Serbia</p>
                                 <a href="#0" class="link">Choose Date</a>
@@ -105,6 +107,10 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
     <script src="js/script.js"></script>
 </body>
 </html>
