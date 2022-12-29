@@ -64,7 +64,7 @@ body{
     display: flex;
 }
 .home .menu li{
-    margin: 0 10px;
+    margin: 0 20px;
     width: max-content;
     position: relative;
 }
@@ -73,7 +73,6 @@ body{
     align-items: center;
     color: #fff;
     height: 50px;
-    padding:0 10px;
     font-size: 16px;
     font-family: 'Lemonada', cursive;
 }
@@ -85,10 +84,17 @@ body{
     content: '';
     position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
     height: 3px;
-    width: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
     background-color: #fff;
-    transition: all 0.3s;
+    transition: transform 0.3s ease;
+}
+.menu ul li:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 .menu ul li:hover>a i{
     animation: translate-icon 0.8s linear; 
@@ -115,9 +121,6 @@ body{
     100%{
         transform: translateY(0) rotate(0deg) scale(1);
     }
-}
-.menu ul li:hover::after{
-    width: 100%;
 }
 .home .content{
     width: 100%;
