@@ -50,6 +50,9 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 20px;
 }
+.header .logo::selection{
+    background: transparent;
+}
 .home .menu{
     transition: all 0.2s ease-in;
 }
@@ -139,6 +142,9 @@ body{
 .book-tour-ref{
     display: none;
 }
+.home .book-tour::selection{
+    background: transparent;
+}
 .home .content{
     width: 100%;
     height: 100%;
@@ -210,6 +216,9 @@ body{
     color: #00d26a;
     background-color: #fff;
 }
+.home .content .text a::selection{
+    background: transparent;
+}
 .home .content .text a span{
     position: relative;
     transition: all 0.3s ease-in;
@@ -249,6 +258,9 @@ body{
     height: auto;
     position: absolute;
     left: 0;
+}
+.card ::selection{
+    background: transparent;
 }
 .pricing{
     display: none;
@@ -612,6 +624,9 @@ body{
 }
 /* @MEDIA */
 @media (max-width: 700px) {
+    .header .logo{
+        font-size: 25px;
+    }
     .home .header .nav-toggle i{
         display: flex;
     }
