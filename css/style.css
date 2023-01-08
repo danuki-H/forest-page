@@ -613,11 +613,12 @@ body{
     transform: translate3d(0, 0, 35px) perspective(100px) scale(1.5) rotateZ(30deg);
     transition: transform 400ms 1100ms ease, opacity 300ms 1000ms ease;
   }
-/* SECTION CONTENT */
-.section .content{
+/* SECTION form */
+.section .register-form{
     display: flex;
     width: 50%;
     height: auto;
+    position: relative;
     justify-content: center;
 }
 /* @MEDIA */
@@ -666,9 +667,10 @@ body{
         box-sizing: border-box;
     }
     .book-tour{
-        padding: 0 20px;
+        padding: 0 10px;
+        font-size: 15px;
         position: absolute;
-        right: 20px;
+        right: 10px;
     }
     .home .content .image-content{
         width: 100%;
@@ -685,11 +687,10 @@ body{
     }
     .card{
         width: 100%;
-        margin-top: 30px;
-        padding-bottom: 100px;
+        padding: 50px 0px;
         position: relative;
     }
-    .section .content{
+    .section .register-form{
         width: 100%;
         height: 100vh;
         position: relative;
